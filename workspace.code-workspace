@@ -1,0 +1,16 @@
+{
+  "folders": [
+	{
+		"path": "../parcel_project"
+	},
+	{
+		"path": "../parcel_test"
+	},
+	{
+		"path": "."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "project_folder"
+  }
+}
