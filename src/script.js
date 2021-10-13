@@ -126,12 +126,12 @@ var myChart = new Chart(ctx, {
         todoDiv.classList.add("todo");
         const h2 = document.createElement("h2");
         h2.classList.add("h2_class");
-        h2.innerText = `name${Object.values(i.name)}`;
+        h2.innerText = `${Object.values(i.name)}`;
         todoDiv.appendChild(h2);
         const cardTitle = document.createElement("h2");
         cardTitle.classList.add("cardTitle");
-        cardTitle.innerText = ` total calories is ${
-          (Number(Object.values(i.carbs)) + Number(Object.values(i.proteine))) *4 +Number(Object.values(i.fat)) * 9
+        cardTitle.innerText = `Calories: ${
+          (Number(Object.values(i.carbs)) + Number(Object.values(i.protein))) *4 +Number(Object.values(i.fat)) * 9
         }`;
         todoDiv.appendChild(cardTitle);
         const final_todo = document.createElement("div");
@@ -141,10 +141,10 @@ var myChart = new Chart(ctx, {
         p_fat.innerText = `fat: ${Object.values(i.fat)} `;
         final_todo.appendChild(p_fat);
 
-        let p_proteine = document.createElement("p");
-        p_proteine.classList.add("p_proteine");
-        p_proteine.innerText = ` proteine: ${Object.values(i.proteine)} `;
-        final_todo.appendChild(p_proteine);
+        let p_protein = document.createElement("p");
+        p_protein.classList.add("p_protein");
+        p_protein.innerText = ` protein: ${Object.values(i.protein)} `;
+        final_todo.appendChild(p_protein);
 
         let p_carbs = document.createElement("p");
         p_carbs.classList.add("p_carbs");
@@ -158,13 +158,13 @@ var myChart = new Chart(ctx, {
 
       allFields.map((i) => {
         totalCal +=
-          (Number(Object.values(i.carbs)) + Number(Object.values(i.proteine))) *
+          (Number(Object.values(i.carbs)) + Number(Object.values(i.protein))) *
             4 +
           Number(Object.values(i.fat)) * 9;
       });
     }
     totalCal2 =
-      (Number(data.get("carbs")) + Number(data.get("proteine"))) * 4 +
+      (Number(data.get("carbs")) + Number(data.get("protein"))) * 4 +
       Number(data.get("fat")) * 9;
     //calories calculations
     let log = document.getElementById("log");
